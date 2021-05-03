@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    /* border: 1px solid blue; */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    background-color: rgb(193, 209, 240);
+
+}
+
+h1 {
+    text-align: center;
+    color: rgb(51, 102, 153)
+}
+
+.form-container {
+    text-align: center;
+}
+
+.input {
+    margin: 2%;
+    background-color: rgb(193, 208, 240);
+}
+
+.btn {
+    margin: 2%;
+    padding: 1%;
+    background-color: rgb(51, 102, 153);
+    color: rgb(193, 209, 240);
+    border-radius: 10px;
+}
+
+.list-item {
+    width: 45%;
+    text-align: center;
+    margin: 3% auto;
+    border: 1px solid grey;
+    background-color: rgb(154, 179, 229);
+    color: rgb(51, 102, 153);
+    box-shadow: 0px 0px 3px 1px;
+    border-radius: 10px;
+}
+
+.list-item:hover {
+    background-color: rgb(51, 102, 153);
+    color: rgb(193, 209, 240);
+}
+
+.completed {
+    text-decoration: line-through rgb(51, 102, 153);
+    background-color: rgb(154, 179, 229, .30);
+}

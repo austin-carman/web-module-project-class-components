@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import './components/Todo.css'
 
 
 const todo = [
@@ -31,7 +32,7 @@ class App extends React.Component {
   addItem = (input) => {
     const newTask = {
       task: input,
-      id: this.state.todo.length,
+      id: Math.random(),
       completed: false
     }
     this.setState({
@@ -65,8 +66,8 @@ class App extends React.Component {
   
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className='app-container'>
+        <h1>Welcome to your Todo App!</h1>
         <TodoForm addItem={this.addItem} clearItems={this.clearItems} />
         <TodoList list={this.state.todo} toggleItem={this.toggleItem}/>
       </div>

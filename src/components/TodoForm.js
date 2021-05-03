@@ -33,11 +33,11 @@ class TodoForm extends React.Component {
    
     render(){
         return(
-            <div>
+            <div className='form-container'>
                 <form onSubmit={this.handleSubmit}>
-                    <input onChange={this.handleChange} type='text' name='item' value={this.state.input}/>
-                    <button onClick={this.handleAddClick}>Add Item</button>
-                    <button onClick={this.handleClearClick}>Clear Completed</button>
+                    <input className='input' onChange={this.handleChange} type='text' name='item' value={this.state.input} placeholder='Add Items Here' />
+                    <button className='btn' onClick={this.handleAddClick}>Add Item</button>
+                    <button className='btn' onClick={this.handleClearClick}>Clear Completed</button>
                 </form>
             </div>
         )
