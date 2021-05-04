@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
-    /* border: 1px solid blue; */
 }
 
 html {
@@ -19,11 +18,17 @@ body {
 
 h1 {
     text-align: center;
-    color: rgb(51, 102, 153)
+    color: rgb(51, 102, 153);
+    margin: 5%;
 }
 
 .form-container {
-    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list-container {
+    margin-top: 7%;
 }
 
 .input {
@@ -56,6 +61,6 @@ h1 {
 }
 
 .completed {
-    text-decoration: line-through rgb(51, 102, 153);
+    text-decoration: line-through rgb(31, 61, 122);
     background-color: rgb(154, 179, 229, .30);
 }

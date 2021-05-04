@@ -4,20 +4,28 @@ class TodoForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            input: ''
+            input: '',
+            search: ''
         }
     }
 
     handleChange = (e) => {
-        this.setState({
-            input: e.target.value
-        })
+        const { name, value } = e.target
+        const change = (inputName, inputValue) => {
+            this.setState({
+                [inputName]: inputValue
+                // input: e.target.value
+            });
+        }
+        change(name, value);
     }
+
 
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState({
-            input: ''
+            input: '',
+            search: ''
         })
     }
     
@@ -28,6 +36,10 @@ class TodoForm extends React.Component {
     handleClearClick = () => {
         this.props.clearItems();
     }
+
+    // handleSearch = () => {
+        
+    // }
    
 
    
@@ -35,9 +47,15 @@ class TodoForm extends React.Component {
         return(
             <div className='form-container'>
                 <form onSubmit={this.handleSubmit}>
-                    <input className='input' onChange={this.handleChange} type='text' name='item' value={this.state.input} placeholder='Add Items Here' />
-                    <button className='btn' onClick={this.handleAddClick}>Add Item</button>
-                    <button className='btn' onClick={this.handleClearClick}>Clear Completed</button>
+                    <div className='add-clear-container'>
+                        <input className='input' onChange={this.handleChange} type='text' name='input' value={this.state.input} placeholder='Add Items Here' />
+                        <button className='btn' onClick={this.handleAddClick}>Add Item</button>
+                        <button className='btn' onClick={this.handleClearClick}>Clear Completed</button>
+                    </div>
+                     <div className='search-container'>
+                        <input className='search-bar input' onChange={this.handleChange} type='text' name='search' value={this.state.search} placeholder='Search Task Here' />
+                        <button className='btn search-btn' onClick={this.handleSearch} >Search</button>
+                    </div>
                 </form>
             </div>
         )
